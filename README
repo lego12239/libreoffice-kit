@@ -1,0 +1,17 @@
+Setup kit
+=========
+
+- make a directory where this kit will be reside(e.g. /var/kits)
+- cd KIT_DIR && git clone https://github.com/lego12239/libreoffice-kit.git
+- edit libreoffice-kit.REPOS.CONF to replace /var/kits with KIT_DIR
+- cp libreoffice-kit.REPOS.CONF /etc/portage/repos.conf/libreoffice-kit
+
+Update kit
+==========
+
+- cd KIT_DIR && git pull
+
+Upgrade libreoffice
+===============
+
+- emerge -au libreoffice

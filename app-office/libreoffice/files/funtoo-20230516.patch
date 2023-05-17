@@ -1,0 +1,32 @@
+diff -ur libreoffice-7.5.3.2.orig/configure.ac libreoffice-7.5.3.2/configure.ac
+--- libreoffice-7.5.3.2.orig/configure.ac	2023-05-17 14:33:23.152739583 +0300
++++ libreoffice-7.5.3.2/configure.ac	2023-05-17 14:34:43.932737817 +0300
+@@ -9533,7 +9533,7 @@
+ dnl ===================================================================
+ dnl Check for system xmlsec
+ dnl ===================================================================
+-libo_CHECK_SYSTEM_MODULE([xmlsec], [XMLSEC], [xmlsec1-nss >= 1.2.35])
++libo_CHECK_SYSTEM_MODULE([xmlsec], [XMLSEC], [xmlsec1-nss >= 1.2.28])
+ 
+ AC_MSG_CHECKING([whether to enable Embedded OpenType support])
+ if test "$enable_eot" = "yes"; then
+@@ -9582,8 +9582,8 @@
+ 
+ libo_CHECK_SYSTEM_MODULE([libmspub],[MSPUB],[libmspub-0.1])
+ 
+-libo_CHECK_SYSTEM_MODULE([libmwaw],[MWAW],[libmwaw-0.3 >= 0.3.21])
+-libo_PKG_VERSION([MWAW], [libmwaw-0.3], [0.3.21])
++libo_CHECK_SYSTEM_MODULE([libmwaw],[MWAW],[libmwaw-0.3 >= 0.3.15])
++libo_PKG_VERSION([MWAW], [libmwaw-0.3], [0.3.15])
+ 
+ libo_CHECK_SYSTEM_MODULE([libetonyek],[ETONYEK],[libetonyek-0.1])
+ libo_PKG_VERSION([ETONYEK], [libetonyek-0.1], [0.1.10])
+@@ -11388,7 +11388,7 @@
+ dnl ===================================================================
+ dnl Checking for libnumbertext
+ dnl ===================================================================
+-libo_CHECK_SYSTEM_MODULE([libnumbertext],[LIBNUMBERTEXT],[libnumbertext >= 1.0.6])
++libo_CHECK_SYSTEM_MODULE([libnumbertext],[LIBNUMBERTEXT],[libnumbertext >= 1.0.5])
+ if test "$with_system_libnumbertext" = "yes"; then
+     SYSTEM_LIBNUMBERTEXT_DATA=file://`$PKG_CONFIG --variable=pkgdatadir libnumbertext`
+     SYSTEM_LIBNUMBERTEXT=YES
